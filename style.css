@@ -1,0 +1,13 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: gray; /* or #1f2937 for Tailwind's gray-800 */
+}
+
+body {
+  background-color: gray !important;
+}
+
+body {
+  overflow-y: auto; /* biar bisa scroll vertikal */
+}

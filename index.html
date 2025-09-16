@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>cinta</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.8s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .heart {
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    @keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.01);
+    opacity: 1;
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s infinite;
+}
+    .typing {
+  border-right: 2px solid black;
+  white-space: pre-wrap;
+  overflow: hidden;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
+
+
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center font-sans">
+  
+
+  <div class="w-full max-w-lg p-8">
+    <!-- Initial Screen -->
+    <div id="welcome-screen" class="text-center fade-in">
+      <div class="mb-6">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSExIWFRUWFxgaGBcXGBcVGBcXFxoYGBgXGBcYHyggHRolHR4YITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGC0lHR0tLS0tLS0tLS0tLSstKy0tLS0tLS0tLS0tLS0tLSstLS0tKy0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAAIDBQYBB//EAE0QAAEDAgMDCAMNBAgFBQAAAAEAAhEDIQQSMQVBUQYiYXGBkaGxEzLBIzNCUmJygpKy0dLh8BQkQ6IHFVNjc5PC8RYXg7PTJVRklOL/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAiEQEBAAICAgIDAQEAAAAAAAAAAQIRAzESITJBBBNRYSL/2gAMAwEAAhEDEQA/AMP6AS0fGMC/RN+iyfVwxaYt3ngCrvaGHpg5Mzzl+adRHrb+7vQOIDNSXX6BusN6y0vzqviInKO8+1Oi3Dp/3RLMkiHPHU0TH1lFVcw/CfF/gg9vrb9E/EvOg/2tnxjaR6oTqNVhIGcnogB3i1D4mg1x5jnOcJlhAaSBGhBMwLmYMSbwYHwDRna4X17ont08UrBOS7XmzHc874HADeOCC2nj30iGsi+bVuYmHHMZkQ0X7kVsrUjv+sq/ljJr02NGrWGBvLgyB3yespT3V5XUQjblQc0imLwQWOJmYjXXd2Jo2u7fTpj6Lt/QHiVVlgc6QSZdJkjebkKbHYdwytYxxAANmuu5zQTfonL2HjatRl55C3bec0+9s+qfDnLv/Ebvit7j96qK7jGVwggz1ExPs7lDTFxv6OMdCqYw/PJfM5Ru3BgO7mn74Tm8pqjnCWUz05X7t8CoFQtBN959qVweEfohHjB55L48p3iJY0fRP404cqKmuVmvxD+NVWErs+FOhgO5zCSDEgXF7zf2oRtL1bgTrOa3SbE9yXjP4P2Zf1oP+KqkwGsncPRkk9Fqinw/K2rOlEDi6mSOr1yZO4DwF1R4N7mVM+ZwLZh7DlzRpdw07DNhCdUxr5eWZmTeWlwMk84yTMFHjP4PPJa1uV1WRLKbd49yIt2v0UR5W1Pis/yz+NUdXFl7Q10nLOUzx1kaX4hDp+E/g88mgdyrq/FZ9Q/jVrsuaz2VHgQA10XAJIJEDhzdOg8Vilutgj3LDnof4N/37kssZOjmVGYupDKZt6t+5v5qLAZ6xf6OIY0vc51mtaOLjv4DU34GINuOjDsPQP8AQqmg0GmXvcWsmOa0Fz3fFbJAsLkkwJFpIBWOO4rPOyrNuKJH3yE8Vz0eKHwraIY0AVTrq5m8k/FU7XU9zX/Xb+BPwifOnekcdITYefi959inYWfFf9dv4FLTyfFf9dv4EvGDzoP0FTg3vKSsJp/Ff9dv4EkeMHnRm1RDzx/WirqgCtdqNl5hVtTgI6/1oE0ICQBABm0311/LxUFRovw8ERW43PVp3odrC6wbPfoiBn67HBziDoZETMzr175R4e91dmaT7nTknUk0GZjJNzKDxbHgm8CfpdZBvCKfbFWJs1oMC3vIFz1hVehO1rsY88zpLPMqu5Un95aRJd6JmUAS4nLAIHRr2Ky2FTzPy35zqYkbpLhKpuVeKJqAAkA02zBMGJERpu8uCjHtrn0FZTDRBinxNRwz3+QAXCehgPykRQLXNlr3bgXAZegNdziWzFiDFtZsqrDUS4Odo1olztwBmGgb3HcOibAEhUKgzCSQADpfQEwAbQYA7ZvoruO2TuMztcWPcXQZuXEdd0ObGQpKtWRG4aDXLxAPDoUYg6mE4RxdcmRrMXuePtXC6Y7U5lIn1Rm6gT4KShhXOMRBEElxDA0cSXffdAR0aD3eq0mNTuHWdAul8SNx1EyJ36JzWZobBfeAG2m+6R1bty5iGNA5s6kSYIkRoRY6i6Aa6pPr3gATvj2prXmmbHp6Co3FNJQZFJcSlMOrc7AqBtGg42HuoJ/6f5+Kwy2GxG56VFh9US4/Kkxk/lJ6p6FGfSsU+2+dhWfNnxaqba7y58FxIDKeWSTANNjoF7C+gV5tO+HBPA+Y/NUO1XD0hjTJRjj7zTRx9HydjNm+9t7fMo0ITZA9zHW7zRZCpAhilYoqalapDsJJQkgC37RFdsix+EN08R8n/Y3QtQ2VFhsSWEEad8fl+tQFdelDmyO3o/LpRo0eeNAmySDc6HfZdy3hEUMKXSNxBvwTDF4nV3b7VoDj3+mr0LejdWe+Ivmph9MQ7hB0PARF5c/k00gzVNx8VFY3ZAp1KlXOSc7rERGYmbp5WaLGe0nJr3wH5dPzKpOWLg3EER/DZHDfKv8Ak9AcDwqM7gs3y3P70fmx3OcFlh8mvJ0p/Sk2ItMxcCeNjqnCoOEdQ9pv4qFrlyVuxSisb3JJEanQ7upMIgxv+9Optk2EndvuuZSDJG9Kh1rog26oB75se1EVK+YZXaSSAGhoBdEmGi2gtG8wuMwr3mzS75Rs0dpRVPY1V3wqZPxc4BI7beKkaA0A3NBJjeR8WLweqbb9N6KqZMmURAnnFuY31I3NFhc36kPWoObYsLesEO7irnCVCAaoY0PsATlBmOaGAwbtuTaBEESA5UM7WpZbH7on9eKjR+NZVMvfSc2SS52V1z16IInpVQzUl2elKUwULccm/eMP/iPHeQsOtlyZcPRUJMAVDN4jnG6jPpWInH3w46j/AKj7Fn9sAipG4spdVqTB961DaAfRptJIDi4GNdH6SosbsGk4tJdUsxo+D8EROmtksL6Pk7V2wWTT6ifNGuZdG7N2a2kwhpcR8qJv1BQ1GKkI2KUJoalVqBok/d+ggHpIL+sBxHcVxAVYomY3Kw2ax0xO6fEW/XtKhpezh1b5R+zGyXHoHmlsCKbQTIP5HpVts+jII3QTPYg2Ub5onjGscYGsffHTbbOAh+nqkiNIOiAGp4eTCbt+jFNzuL47ySrLBU5cLb/amcraQGGbxNRp8HJ3o8e4zOxGzaYlxvw5ouqDlXTL65dcEjTpkktn419Fo9jsj6x+ys9ympE13Qb8OMcOm5t3LPDtfJ0oXMgC6TGyQnVXTJOqjAWzJMxoMkCAOlE4OA0yC4CIHT8roCCIVhg6fuZMxcaa77JUQytWJHOqEnhu7Bp/so/SmxAJ46kdtl6XsHklQpsYXtD6haC4uGaCb5Wg6AaK/bg2AQ0ADgBHkscuaT6dWP49s915Ls7G5+Y8ZmSbE6TPq8D4cZXcXSdZpcTAGZw0lxLi0xvvp+S2HKrk0wj01NuV7RcRZ3T2LHYmk1tQZzAzSKYJnNcSYtAPHUTHFOZTKbjDk47jdUE2mxxMtc8j4pg6xJ5rpCCrUy2xBb0EEHyV85r6QdkdDzIBEOdIMSGi4LhPOgkZTpMqmxjB6wqF0wSHAh1+M2PWCtIiBkrfr/dcSVGdZavk7T9JTp0yYaXyTv8AXywDxM+B4LJArZ8k2zSYeFVn2nqM+lYrnBQ4UwBA9IYA3AmpbyR+Jper83yc4IPYzedSH98B3ucFdY+l6vUftvSw+zz+gNBnNf1D2qtqsurnDts7oCBqMVIVxkmG3O/gOv7lW7SpnNEzYHrN1e1T4BVO0vW+iPMoCtg8Uko60kEnolH7PMZ+z2quo7+pGYN9nHq9qVNeVMeHPnQu0HnHbu4Iuk0hjiCIIMi8tJNtRGsHt7FhdtEmO9EbK22+m30TjNMkGTJc2DNiDdvR3cCxtv8AZlXnN+cJHC4TOVrs2GpHhUaO9rj7FVbO2nTzsAdBLmiIOuZc2ptFlSk1jXSQ4EiCIgEb+tLK/wDNVj8og2OOcPp/9srI8pj+8VeIy/YaZWt2W/KQYmC4xx5sQsbymd+81I05l+PMYo41cisJldlIahMlbMjwrfkxD6zabtC5p7jfwVOCtt/RlVY41qRa0v5r2mBOUHK7nRIiQYHEqc7qbXx47ykajaVWqHkNfVHAUm0/5nVNepqnxNF9SiA7MTOk5Z4AkIzG45tNsuMDe60ARJMmwUNMYh7MzGEsmR7mRLfpjxXE9KSfaLYmCcCWup5KZBzBr3OGkAw7f0hYvlPybfTzYolpZTbBaCc+YktB9XLAcW75iVuMDtHNLQHZQYlwIMixbe8hZTlvykoOo1cPScXVHvDXiCAwU3STJFySALf76cdu/THlww8fdZPGY4+jokmXHOXcYJBHcZjpCC2jiM7g7fAnpPHriJ6kNC5K6pNOBxJJJMyWy5Iz6If4zO4Z5WNWi2HVd6HK20vMu4WEeanLpUaulVPpWXHNqsuAAOa5rd1p4neZJkklXePq+r1H7RWXptFOzJIY+BOpyubcxxueiVZY/FltGlULbPdUAGaTDQw3t8oKcb2ef0OoPs/qVdVrd/61UWCx5qOLQCJBk66cOlKqALfrt/W9Ugxzif15IDaHrDq9pRrjaZQeNuW9qDV8H9Qkp5CSCOoOIBEeCIwzrHTXoTsHsvEOzBuGrktLQQKNSWk3EjLIsQb7jOimpbPrZXE0aoAMEmnUABjQnLAPQkaj2nUBd3R2z4WQ4CPxux8S5xLcNXcAJMUnkQDE6Xidyb/U+Kk/umJs4MM0aoh5gtaZbYkFpjpHFCVjyeOd7DNw9nbDiY6D9yM2jRLXCd7W349Km5J7Kq03VBWw1ZhHOBfSeAIa7eREW3yDZWPLWo7LRmiWDe/0eUF8eoXRE2Jym9uAtnnfpph2rthiXt7fOPasPttpNeoeAYT/AJbVttgO509B+0AsVt4kV37gWsHXDGgp8Z8gCpAMDcYn2+ahTg1LL0rZkapMPiH03ZmPcx17tJaYOtwm5ekJZOkd6Deo8jtqGphGF9/Rk0ieIaBln6LgOxXrmU9RUAHQVh+SOPbhqZo1uaKhzg35pIAhw6QAejf0XVanhXDPnbl4hwIK5OTCzLp3cXJ/z2tH4ppMUzMCZGi8YLibkyTqV6RieUNGk3LSBdNi6IAG+OJjsWJx+wq1LMcjnMb8NokZdZMerbjoteHCybsYc+cys1VYkuhpSyngtmDiS7C4gEtHsA+4/wDWZ9pn3rOLQbDPuDjwqDzYfYpy6VGhcL1BwrPH84TNsDLh6PMqwDU50uynMyi6BuEAHuPBcNXMax/v3kdWZqstu4Wq7A4f0dOq+HEkimXw17QGtls2zBoGk6QLhZ49qy6iiwNOTzaZdbVz3MHhJ7IUlOnUDjoWS4Ei/PJB33NhE9F0Xs7C1mg56NVhaSCHU6jS0Gcs5hwHgVPWwFQTFGpAJBim+A71iCYsd8FXtAZhJAB017dFFjPg9vsUzLXP6nRPFF9S1Nj3ka5GueRv0aCbwe4pbJWXSRM/N72pJ7J7LWogA9AndxgeHmnOojM1tu0D4xmfqhdxfw+pifVHOafku83LFqgoCQ2zb5ZEfH/XinNZYyATzYkTq/L+upOoi4HyqQXC656mn+cFADVW3EgEOMXGt4Pme5Z/lo5/o8HTZTp1PTPeQxwEeksWm+jQ0vkjnQTBC0Bdan893gqzG0G1KuBDgCGUsS+DucKmHpgjp57u9EDJU8K2niKlMAta0Wm+WchuTeATvvETvXnm26vu1UbswjoIAHiPIcF6TtmmG4vFNaIAaYH0aftXnW1aANaqc4Bzvs4FuhIs64Oh1I0WmBZqtdIsN8k27G/epsFhX1nimwXPGwA3kncAtTh/R4WG0xmO+oQMxJgWPwW9APet5jtlvSl2dydrVDzx6Ju8vEHsZqe2B0q0oYSlSe0MZJjMalSHOiTGUeq024EidUsTjHO3xJ0HDh33Q7XTmPYOy33q5jIW3Ma6STe2/VBsF5RdU80oWnRcZIByjUgEgSYEndeB1lMJAFc4TGlrmvzEHNeDq08033wFU0mohECwaKNVsV2Bz785oyPtvzt1+kCq/G8lib0KocDoyoQHaTZ45p035dQnTfxT2vMpWSlusxiaL6bix4c1zbFpsQovSHittjqIxVLK73xg5jt8DVh4jfHHTVYqtSLHFrhBCzuOly7L0p4q62RV9xfOme/cOHSAqJW2zT+71x0T4tUZdKjXbHpj0obUEg1BmA3zBOkcFtOTVbGVA/8AaGMpCW5YDbkZ80BhHNs2M19brIYBs4gA/CfT0ketG8L0XBNDS1rRbK3eTJh0kk71ltd6iRrKhgF4uY0PR0/KKkLXi+dt7nmm/Xzr/ku0nWYen2fkpH+p3jxckSN+EBkuDC6CJ9G24giDMm4troU9rX3IqROYnmi+U5b9MeSlcd/yh9kH2puFuD1OH8xQHP2I/GH+WPvSUH7V1pIArGHnP+j4GFNV1PQw+RKGxDueek+2UTiDZx+R7ISNFht3+LTCZVPOf0Dyc1Pw2jP8ZvmFC/Wp813mihDVNmfPenYSmHCm6LtY4T0PrNP+gdyjxnqt+c7zKIwbstEHiQO4vPtSDBcoT+9Yo9Q7/RhedbTqA1KwNiKtQtjfzjIK9E2rz8RiiDEOGvySPwrzPaIJrVQBc1XgR0uIgLXCJ5FlseoadJ0D14JI9aNwB9nWlUrSdZ0IUlelDi0iI3TbshB1KcGekLq+mQl7rp1MW7UM929FSmHH7+pNoA5XRmgCXxMAA6ui0AkXO8rr9D1LU8h2FlKpWDskvAzX9WnDjEcS8js6FHJl4zbTiw88vFlaBmT0+SmU208P6OvXYDIFRxFos+KgEdToQ5VS7m0WaunXHy+9M9JoVG96iJkAdP3pp0MbWnQ9vtVdt4zkdobgcco49vmrGmBoN2gUlTZZrUnsA90aQ9gOrhEOb3eMJWbhxk1bbHE0qzeIA7yFUqz2NUgVOnKPtLG9NI2mCqfvVI/Lw/i5v5r0WkYeO3/V7IXluya+atTMRDqP8r9V6fUNwflnyCwXehTTzGdbfap3Hmj55HgCh3+99WVTvPNH+J5tH3ISkcebPAj7H5LuEFj1n2qJx5h+h4ioFLhjzT2oCqlJdXUzWFQ87tUmPfDSd8D2KFnrDrKk2ibnrHmFJlQdZlv4jfNqjrOAFUlzWjK6S4hrRrdxOgRFM+9fPHmqza2GNSjiGNMF7HhpOmaCWz0TCNANidr4XK0OxdGRM5BWfqTplpx4pg5W4RlMMzVXw6ZbRgb973NjXgsgeSeLDQ4vpNaZ/iPJsYNmsjxUx5IPa2lUOIaXPq02NYGOMue9wnMXCzWte82uGxbVPUAWptDDVDVNVlZz3vBdkq06TJ9awdTc6xcRw5ojpo9oVKXpS+hQbTNyXPe6qS4kklswB1gBE4/ZvojiAHlzqNR7A6A0OLfTDMReLsBiTqqJtKIABJPWSSerf0Lfik7Rn/ErhGoHZ+aHrnT9b1p6HIus5oLqrKZ+JBfHQXAxPVPWqXa3JvF0bmnnaPhU+eO1vrDuhXOXC3WxeLOTdiucfMIuUET5ouVohys7mlbrYeEDcFTY6RmplxnXnlzyD2EDsWJwtD0talS1DnCR8kXd/KCvSMe+Kc8Sxv13tb7Vy/k5dYur8XH3cmR5X4fJiDU+DVDSBwLGtYR4NP0uhURdw7ls+XeEPohUFzTdJ+Y+x06ch6mrCMqAn1hPQQtOHPeEZc+Os7/p9Rygc/TrKe93GETs/Y1bEkeiYSL8/Rg1+EbG/BaWye6zkt9RE1sjUgdFvFTYbGvpEFryQNxgjsLrjsWpwfINuX3esc3Bg5o6ybu8FQbU2Z6B7qZiwtva5p0N7/mFOHLjldSqy4ssZuxR7XZme6q1pa1xkgjRx1g6EE36JhSbD/ifNP2XKX0BdmptgZgLE2NxzgeA6dEzZLQxzg+o1mZpAJzEAlrgJLQbSRdTmWLTUSG1mHopnuhel4mwHzz9leev2eSWkVaJ5oB91aND0rcVdpUC2PS05zz6zenp4LCytPob+1gtLYOinZWzM4Q9u8bgUK/auEIaPS0Ra9xPaQEnY6ife6tOLE85vOM9YNhOvx9+7DHluXrxsv8AsFielUaQ4AESAeIMEzv6VNh8Y3LEO0HDh1qGi+mQb02uLbQ9lzI0Nt06ojD02ZdGzHELaS6SBzBJPlnxmfXH3pJ6oG0PXHau4884/O9qZhDzx2pYw876XtKRiqZvT+ePNDO0f2+SmpO5zPnDzQtV1ndRVQg2NPuVP6f2ihcG7NisKw6U6eIq/SzU6TT2Cq/6ydjavuVM/P8AtFVOBf8A+ptv6uGg9ctd7VCoyu3nHNi4uDWqE2JtnqDycU7kjsl7nDEObzWzkne7SR0C/b1I3ZzKVQ4gVXABzwPWgkk1DuuTvhHbE2oyph6TqbmgBjQWyBlc0AFpnp7xB3p5ZWYan20wxlz3fpbAKQOQba2bQz1GfJdkrm07PJzFYChVOapQpvPFzWk9+qjbsbDf+3pfUb9ydVxLKYzPcGjiSAPFVOL5YYVnwy88GAu8dPFXPO9bRbhO9Lijsukw5mMYz5rGttwkBVfKjHtpspgmB6al0WbUa8nqACzu0eXNR0tosFMfGdzndwsD3rNYvE1KxzVXlxjfu6gLBbYcOVu8mGfPjrWL2HEM9IDoZkEHQg2g9CkqbKbVpNc+nSqNDWnLzD6N2US3LEiDLbHgvM9k8rsRRDWmKjRa4OaB8qd3SFe4flxSNqjHjpAB77z4InHnjvRZcmOdjVU9mYZnq4eiDxFNgPkiS9Zujyswrv4sfODm+JEKdu2KBEiuz67fvXPljn97dMzw+ly5ZXlthZY2qPgnK7qdp4+aIq7ew7bnEMPU4OPc1Um2+VNKpTNJkuzRJIytEGZvdXxY5TKXTPlzxuNlqlpes0giWuBvp0gxeCLWQ+I2ewC79PlRr9Fda1rhaq4H5LWu8c4PZCirNdNqxPzmx4XXbld1xI2YRk++AfTg9nNUn7LJMVLDg6e+FHD/AO0Hd+St+TOyH4l72l4Aa0OLsubeQAG2k67xp2KdhVOokfxiOtwHtSbScdK5+uPxIvbGCdRrvpOLTli4Ah0gOBEjgRbcZChbSEgZmt6S0GOwIDlOi+RNQkfOt4OSbQq/Hd2wfal+zGfXo/Vf32apsFst9R7WNDHuc7KGta4ndDtIy3O+RlMgBAD/ANXn457h+JJan/lxjf8A4v1nfhXEbD1rBGX9ntUWJdftH+pdwRh09SG9JN/lN8nLFQ+g6XM6x5oGu/d0ovDzIgaHgT5BEM2XRLRmqVc2pikY6h96YZzHO9xp/T+0Vjdr7aq0MTUr0soeGtZzm5hGSm02J15viVvts0KLGAEYggGxgNJzGbBrXu/lWO2NSwlXE1H4ljqlFweBSaXZ2uzNLHFzC3NABBFvW6AiGruTuFltd7ptVcbiJ5uYOHRLV54AvdsRhNm0HvY6riaNN4aW52QAS0g5aj8xe253G7XDMYWaqchsI6nko1XnNTL2uqNDHNggh7jFxFi0EWdoTdXLImzbzGm8tMtJaeIJB7wrDAYqq5xBq1CMp+G7oHHpW6H9DGMIn9qwH+dU/wDEqnbvIuvsxzBXqUanpmksNF7niGxJOZrSPWbB0PYtJ2lmjRBJJJcZiTc+KQpAIssXMq00kBUbcp+VPLJJTxSRo0WRLKp/RpuS6Ab6NS4eiCY4270/0acxsX6QjSVSBzTIuIHnPkFEdFcvwL/dIZLXFxHOaNYixPWgzsqt8T+Zn4lFVIr1YEc1pO8Dssmv2TV+KPrM/Eia9MkhkZnCBzIcPVG8d3YVCg5F4BlWWx8bUouLqbspiDZrgRMwWuBBFhu3KEbPrf2fiz8Shw1aC7dprY7+KAn2tWdUqZ3kuc4SSdT7LC0BCmUS2i+pJa3NliTItMxqQhar8pyugHhr5ID0OlsTDN2YyqKbfSOpCoahGZ0tpmo4NJ9UHLEDiU3+jiq84h0n+C/NFp51KAQLGDPeVa4DE0K+yKdGnhq767qJpgtNg9ofSLwC8BzImwaTfdqBeStE4R7jWoV2cwjOMNiXuJJYYcRzMttRdZXtpJ6bRJV/9f4f41b/AOtV+5dQnVE4d3msvt/G4ikz0lNzGUhAJsXmo4w2zmluUdc3KvsIdbrOcrD+5O/xKfmEwzlTlNi3etWzRpNOif8AQmf8QYn+0b/k0P8AxqqC6VWoWxztoVqjpNQggHnNa1kNEkmGACfMwFx21apJcHFmYk5WEhrZMwOgITNDT8ox2C5HflP0VwJBO7FvBBDjmgSbyTJdJOpN/JPw2OqgnI5jTvJFIG9jzn+UoQ/rssuEI0F3TxeNiWlmXcQMNCr8dtCrVA9K7MaZcwc1rYAMkDKADffdAOaFNUJN9Jc4/wAxA8vFXxz2Mr6RFMKfCa4ardmgapQogpEA5c3rq5N0BK1Ppie781GE+m4gghBHHHtHNOUxxDj5FQftTOPg5D4gTUfGk+BAKYKRPDvCws9tJRH7TSNiR25h5qcBvxG+P3qmxDDeyuWICVtWLhrQe1SVMQSILWnraD16/qyhCSnRul8iMrY4AR5JtMhpkNAPFJcKYWFHbldjG021CGtAAENsBoAYm3Wr/k3y5xVF/up9PSIghwzPYdQWOkTukOJ6OnGkozAaHr9iz5PWK+Obunpn/Maj/YO+r/8ApJefZRwSXP5uj9cek4b1XdqzXK58YSONVo8CfYtFhTzT2+Sy3LZ37tSHGuP+3UXS5WPSSRGz6QfVY1wkEmRJG4nUJ269lJu6Du0B3DwuSkDv7uuP13LWO2LQFwwjpD6n4kTR2RQsTSB6XZneZWX7o1/TWKXCt1/VeH/sGdrB7Qk3ZuHv7hSOv8Np4dCX75/D/Tf6wZUlT1Gfrp9q3hwFEFsUKQveKbRw6FicaBMDd5Ero4M/LbLkw8QiY/RPUdXRdDJGpGqNOYUA8pLiUoCRcK6uoCGrRzVHmY0Ok6j8l1uGDTZ024Rw4qXIJv0TvsNN/SV15AMxPH9T+oWOXaoq8Xv7VaU9B1DyVTigbyZKtaB5reoeQSpxIkUlwpGSa4pyYUBxGbN0f2eRQhRmzPh9ntWfL8V8XyE9iSklJcjrb/Du5pPQVl+WjvcaQ/vCe5pHtVtTxzYLRBOkBzSd40F9yz/LCrPo2bwSSDrcN3bl2TtxaZyUbsX35n0vslBKw2AD6dsRoZnhF+1Gfxp4fKNTU0/XSiqWg0Q1RF0xp2feuJ2OF10mOsnHd+uhR7v1vhANqviTwE9wJWDxUZo6h3LabSdFOofk+z81iH+v2ru/Fnq1y/kdxG5RVdFLW1UFbRdTnN3JBcboutQDgUt64uNKAICSQSfqEBu/6OQ0jENc1roNF0kA+s2oN/zVu2YCmNGM+q37l5lyG2xRw763p35A9lMA5XOnK5x+CDpJ71smcuMACP3jh/CrfgXFzY3yum2FmnmX9J1LLtGvAABbSNrD3to9iBwvqM+aPJGf0jbRpYjGOq0XZ2GnTEw5t2iCIcAfBBYV0sZaOaON7a3Wk+MTe0wSK4kUBwlNXSmygE5GbJ1d1DzQRKM2Sec75p8wp5PjV8fyg5JOzJLidbGfBHYrLC+s76P2Qkku6OTLoUrPk17+PmO9iSSWfxpYfKNOUY3d1JJLirsNdqP1wUbtySSAG2p71V+b7AsSfWKSS7vxfjXJ+R3EdfXsQ9fRdSXUwMGic1JJAdUYSSQBLPZ96VXd1/ckkgFv7vJR/ekkssu1QFjtez70fg/Ub1BJJTTiYJJJKTNKYkkgEi9leufmnzakkpz+NXx/KLJJJJcTrf/Z" 
+             alt="orang ganteng" 
+             class="mx-auto mb-6 rounded-full border-4 border-white shadow-lg">
+        <h1 class="text-3xl font-bold text-gray-800 mb-8"> A message from me to you. </h1>
+        <p class="text-gray-300 text-sm opacity-60 heartbeat">Enter your name to receive your personal letter</p>
+      </div>
+      
+      <div class="bg-white p-6 rounded-2xl shadow-lg">
+        <label for="name-input" class="block text-left text-sm font-medium text-gray-700 mb-2">
+          Your Name
+        </label>
+        <input 
+          type="text" 
+          id="name-input" 
+          placeholder="Enter your full name..." 
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-lg mb-4"
+        >
+        <button 
+          id="submit-btn" 
+          class="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300"
+        >
+          View My Letter
+        </button>
+      </div>
+    </div>
+
+    <!-- Greeting Screen (hidden initially) -->
+<div id="greeting-screen" class="hidden text-center fade-in">
+      
+      <h2 id="greeting-text" class="font-serif text-white mb-8" style="font-size: 100px"></h2>
+      <p class="font-serif text-white mb-64"> If ur reading this, it means ur the chosen one</P>
+      <p class="text-gray-300 text-sm opacity-60 mb-8 heartbeat">
+  Click anywhere to open your letter
+</p>
+
+
+      <div class="flex justify-center">
+      </div>
+    </div>
+    
+    <!-- Letter Screen (hidden initially) -->
+      <div id="letter-screen" class="hidden mt-8 w-full fade-in">
+        <div class="bg-white p-10 rounded-lg shadow-lg text-left max-w-4xl mx-auto max-h-screen overflow-y-auto">
+
+        <div class="flex justify-between items-start mb-6">
+          <span class="text-gray-500">September 14 2025</span>
+        </div>
+        
+        <div id="personal-greeting" class="text-xl font-medium mb-6"></div>
+        <div id="letter-content" class="text-gray-800 leading-relaxed space-y-4 mb-6"></div>
+        
+        <div class="signature">
+          <div class="text-2xl font-serif text-indigo-700">-Danen</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Letters database
+    const letters = {
+      "Cinta": {
+        greeting: "Dear cinta ananda,",
+        content: `
+          <p> Hi cinta, in case you forgot my name: Im Danendra (full name: Mohammad Danendra Cleosa Susilo), Im 23, healthy, and — yes — handsome 😄.
+         </p>
+      <p class="mb-4">
+          If ur reading this rn I hope ur doing well, physically and mentally. ill just get straight to the point. Cinta Ananda, i need to tell you every feelings that i had  for u and i think that u deserve to know every single details of this feelings. cinta, i dont know if this too early for u, but i feel like we’re on the same page rn. I must say that I have feelings for u. and I feel like this feelings that i had are bold enough to start this relationship to one step ahead. 
+</p>
+      <p class="mb-4">
+Cinta.... aku sayang sm km. Not the small, passing kind of thing, its something much deeper. I dont know cin, I havent felt this kind of feelings since 6 years ago and trust me cinta ur not like a single girl ive ever met, ur the best thing that ever happen in my life. The more I get to know you, the more I realize I don't just want to date you, I want to build a life with you. I know marriage is not possible for me right this second, but I want you to know that u're the person I’ve been searching for. U really got me at "hello danen, it's me cinta from facetology". and i love it. i love every single details of u.
+</p>
+      <p class="mb-4">
+I've seen your flaws, and I accept them. they’re just a part of who you are, and I love the whole you. My intentions are honest and serious, I don’t want to lose you cin. I believe someone like you doesn’t come around twice. I promise I will fight for you in every way,  <strong> if u’re willing to trust me and walk beside me through every step.</strong>
+</p>
+      <p class="mb-4">
+Cinta, I dont have much right now. Im not rich, I cant take you to fancy places like other guys, I dont own a nice car, and I cant spoil you with expensive gifts. But one thing I know for sure is that I never take a step back from something I truly start. Once I give my heart, I give it fully — with commitment, loyalty, and the will to fight for it no matter what. And that works the samme with every decision that i take in my life
+</p>
+      <p class="mb-4">
+I want to work hard (AND WILL) not only for myself, but also for my family and for you. I want to become someone more stable, more mature, I want to grow, to achieve more, and to build a future where I can give you the love, stability, and life you truly deserve. My dreams aren’t just for me anymore, they’re for us. And if you let me, I’ll dedicate every step I take to building that future with you. One day Ill be succeed, and i believe in that. Maybe not today or that day will not be tomorrow, but i will. mark my words.
+</p>
+      <p class="mb-4">
+
+I know its not gonna be easy cin, it never will. But thats the point, the best things in life are never easy. And thats why Im ready to put in the effort, to go through the ups and downs, and to face every challenge as long as it means I get to walk this journey with you. I promise I’ll fight for us — through the struggles, the doubts, and even the hard days. 
+</p>
+      <p class="mb-4">
+      If u need time to think about it, u can take ur time as much as u want. and when ur ready, u know where to find me.
+        ` }
+    };
+    
+   
+    const welcomeScreen = document.getElementById('welcome-screen');
+    const greetingScreen = document.getElementById('greeting-screen');
+    const letterScreen = document.getElementById('letter-screen');
+    const nameInput = document.getElementById('name-input');
+    const submitBtn = document.getElementById('submit-btn');
+    const greetingText = document.getElementById('greeting-text');
+    const personalGreeting = document.getElementById('personal-greeting');
+    const letterContent = document.getElementById('letter-content');
+
+    submitBtn.addEventListener('click', showGreeting);
+    nameInput.addEventListener('keypress', e => { if (e.key === 'Enter') showGreeting(); });
+
+    function showGreeting() {
+      const name = nameInput.value.trim();
+      if (!name) {
+        alert("Please enter your name to continue");
+        return;
+      }
+      if (!letters[name]) {
+        alert("Sorry, no letter found for this name.");
+        return;
+      }
+      welcomeScreen.classList.add('hidden');
+      greetingScreen.classList.remove('hidden');
+      greetingText.textContent = `Hello, ${name}!`;
+
+      document.body.addEventListener('click', function showLetter() {
+        greetingScreen.classList.add('hidden');
+        letterScreen.classList.remove('hidden');
+        personalGreeting.innerHTML = letters[name].greeting;
+        letterContent.innerHTML = letters[name].content;
+        document.body.removeEventListener('click', showLetter);
+      }, { once: true });
+    }
+  </script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
